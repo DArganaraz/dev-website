@@ -1,23 +1,18 @@
-import { useState } from "react";
-
 import "./App.css";
 import Header from "./pages/Header";
 import Projects from "./pages/Projects";
+import About from "./pages/About";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Header />
 
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+      <About />
 
       <Projects />
+
+      <p>&copy; Devon Arganaraz 2024</p>
     </>
   );
 }

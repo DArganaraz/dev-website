@@ -19,11 +19,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: rgb(46, 169, 240);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: rgb(37, 126, 179);
 }
 
 body {
@@ -49,6 +49,10 @@ h1 {
 h5 {
   font-family: "Ubuntu Mono";
   font-size: 2em;
+
+  span {
+    color: rgb(46, 169, 240);
+  }
 }
 
 button {
@@ -63,7 +67,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: rgb(46, 169, 240);
 }
 button:focus,
 button:focus-visible {

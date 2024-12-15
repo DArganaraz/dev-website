@@ -1,0 +1,50 @@
+/* BinaryBackground.css */
+.binary-background-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%; /* Make container fill screen */
+}
+
+.binary-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Make background fill container */
+  background-color: #021016;
+  user-select: none;
+  z-index: -1;
+}
+
+.binary-content {
+  width: 100%;
+  height: 100%;
+  font-family: monospace;
+  font-size: 14px;
+  color: #0a283e;
+  white-space: nowrap;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.binary-row {
+  display: flex;
+}
+
+.header-text {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-text h1 {
+  margin-bottom: 0;
+}

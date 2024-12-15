@@ -1,14 +1,19 @@
+import BinaryBackground from "../components/BinaryBackground";
+
 function Header() {
   return (
     <>
-      <div>
-        <h1>
-          Dev<span>on</span>Web
-        </h1>
-        <h5>
-          I'm Devon Arganaraz, a full-stack web developer with a passion for
-          making life better using code.
-        </h5>
+      <div className="binary-background-container">
+        <BinaryBackground />
+        <div className="header-content">
+          <h1>
+            <span>&lt;</span>Dev<span>on</span>Web<span>/&gt;</span>
+          </h1>
+          <h5>
+            I'm <span>Devon</span>, a full-stack web dev with a passion for
+            making life better using code.
+          </h5>
+        </div>
       </div>
     </>
   );

@@ -22,27 +22,34 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   };
 
   return (
-    <div className={`project-preview ${isExpanded ? "expanded" : ""}`}>
-      <div className="image-container">
-        <img src={imageUrl} alt={title} onClick={handleImageClick} />
-        {isExpanded && (
-          <button className="close-button" onClick={handleImageClick}>
-            x
-          </button>
-        )}
+    <>
+      <div className={`project-preview ${isExpanded ? "expanded" : ""}`}>
+        <div className="image-container">
+          <img src={imageUrl} alt={title} onClick={handleImageClick} />
+          {isExpanded && (
+            <button className="close-button" onClick={handleImageClick}>
+              x
+            </button>
+          )}
+        </div>
+        <div className="text-container">
+          <h2>{title}</h2>
+          <p>{description}</p>
+          {icons.length > 0 && (
+            <div className="icon-row">
+              {icons.map((logo) => (
+                <Logo key={logo.alt} {...logo} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-      <div className="text-container">
-        <h2>{title}</h2>
-        <p>{description}</p>
-        {icons.length > 0 && (
-          <div className="icon-row">
-            {icons.map((logo) => (
-              <Logo key={logo.alt} {...logo} />
-            ))}
-          </div>
-        )}
+      <div>
+        <br />
+        <br />
+        <br />
       </div>
-    </div>
+    </>
   );
 };
 

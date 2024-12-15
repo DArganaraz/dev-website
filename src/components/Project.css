@@ -1,7 +1,16 @@
+#projects {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
 .project-preview {
   display: flex;
   gap: 20px;
   position: relative;
+  align-items: center;
+  text-align: center;
 }
 
 .image-container {
