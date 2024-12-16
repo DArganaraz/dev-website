@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
-  font-family: "Ubuntu Mono", Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  font-family: Lato, Ubuntu, Ubuntu Mono, Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -36,23 +35,26 @@ body {
 
 h1 {
   font-family: "Ubuntu Mono";
-  font-weight: bold;
   font-size: 4em;
   line-height: 1.1;
+}
 
+h5 {
+  font-family: "Ubuntu Mono";
+  font-size: 2em;
+}
+
+h1,
+h5,
+p {
   /* Target the specific word */
   span {
     color: rgb(46, 169, 240);
   }
 }
 
-h5 {
-  font-family: "Ubuntu Mono";
-  font-size: 2em;
-
-  span {
-    color: rgb(46, 169, 240);
-  }
+p {
+  font-size: 13pt;
 }
 
 button {

@@ -1,3 +1,8 @@
+import gmailLogo from "/src/assets/icons/gmail.svg";
+import githubLogo from "/src/assets/icons/github.svg";
+import linkedinLogo from "/src/assets/icons/linkedin.svg";
+import devPhoto from "/src/assets/images/devon.jpg";
+
 const DownloadButton = () => {
   const pdfUrl = "/src/assets/Devon Arganaraz Resume.pdf";
 
@@ -8,47 +13,65 @@ const DownloadButton = () => {
   );
 };
 
+const ActionButton: React.FC<{ href: string; src: string; alt: string }> = ({
+  href,
+  src,
+  alt,
+}) => (
+  <a href={href}>
+    <img src={src} alt={alt} className="logo logo--large" />
+  </a>
+);
+
 function About() {
   return (
     <>
       <div id="about" className="about-row">
         <div className="image-right">
-          <img src="/src/assets/images/devon.jpg" alt="Devon Argnaraz" />
+          <img src={devPhoto} alt="Devon Argnaraz" />
         </div>
         <div className="text-left">
           <p>
-            My name is Devon Arganaraz, a Melbourne based developer with a
-            background in Telecom and Progamming.
+            My name is Devon Arganaraz, I'm a Melbourne-based developer with a
+            knack for turning complex ideas into efficient code. I have
+            experience across a diverse range of telecom projects, enabling me
+            to break down challenges and provide innovative solutions.
           </p>
           <p>
-            I've had experience using a wide range of programming languages, and
-            love to learn whats needed for any challenge
+            I've honed my skills across a wide range of programming languages -
+            especially proficient with Python, Javascript and many of their
+            popular frameworks. My experience and education equips me to learn
+            quickly and deliver outstanding results, no matter the project.
           </p>
+          <p>
+            <b>
+              I'm currently open to full-time working opportunities as well as
+              freelance web projects,
+              <br /> so <span>lets build something great together!</span>
+            </b>
+          </p>
+
           <br />
           <DownloadButton />
           <br />
 
-          <a href="mailto:devon.arganaraz@gmail.com">
-            <img
-              src="/src/assets/icons/gmail.svg"
-              alt="Mail"
-              className="logo logo--large"
-            />
-          </a>
-          <a href="https://github.com/DArganaraz/">
-            <img
-              src="/src/assets/icons/github.svg"
-              alt="Github"
-              className="logo logo--large"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/devon-arganaraz/">
-            <img
-              src="/src/assets/icons/linkedin.svg"
-              alt="LinkedIn"
-              className="logo logo--large"
-            />
-          </a>
+          <ActionButton
+            href="mailto:devon.arganaraz@gmail.com"
+            src={gmailLogo}
+            alt="Mail"
+          />
+
+          <ActionButton
+            href="https://github.com/DArganaraz/"
+            src={githubLogo}
+            alt="Github"
+          />
+
+          <ActionButton
+            href="https://www.linkedin.com/in/devon-arganaraz/"
+            src={linkedinLogo}
+            alt="LinkedIn"
+          />
         </div>
       </div>
     </>
