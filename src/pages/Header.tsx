@@ -1,4 +1,5 @@
 import BinaryBackground from "../components/BinaryBackground";
+import ScrollDownButton from "../components/ScrollButton";
 
 function Header() {
   return (
@@ -13,6 +14,7 @@ function Header() {
             I'm <span>Devon</span>, a full-stack web dev with a passion for
             making life better using code.
           </h5>
+          <ScrollDownButton />
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 import gmailLogo from "/src/assets/icons/gmail.svg";
 import githubLogo from "/src/assets/icons/github.svg";
 import linkedinLogo from "/src/assets/icons/linkedin.svg";
-import devPhoto from "/src/assets/images/devon.jpg";
+import devPhoto from "/src/assets/images/dev_head.jpg";
 
 const DownloadButton = () => {
   const pdfUrl = "/src/assets/Devon Arganaraz Resume.pdf";
@@ -27,15 +27,12 @@ function About() {
   return (
     <>
       <div id="about" className="about-row">
-        <div className="image-right">
-          <img src={devPhoto} alt="Devon Argnaraz" />
-        </div>
         <div className="text-left">
           <p>
-            My name is Devon Arganaraz, I'm a Melbourne-based developer with a
-            knack for turning complex ideas into efficient code. I have
-            experience across a diverse range of telecom projects, enabling me
-            to break down challenges and provide innovative solutions.
+            I'm a Melbourne-based developer with a knack for turning complex
+            ideas into efficient code. I have experience across a diverse range
+            of telecom projects, enabling me to break down challenges and
+            provide innovative solutions.
           </p>
           <p>
             I've honed my skills across a wide range of programming languages -
@@ -72,6 +69,10 @@ function About() {
             src={linkedinLogo}
             alt="LinkedIn"
           />
+        </div>
+
+        <div className="image-right">
+          <img src={devPhoto} alt="Devon Argnaraz" />
         </div>
       </div>
     </>
