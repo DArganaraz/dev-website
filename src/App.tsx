@@ -1,12 +1,14 @@
 import "./App.css";
-import Header from "./pages/Header";
+import Hero from "./pages/Hero";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <Header />
+      <Navbar />
+      <Hero />
 
       <About />
 

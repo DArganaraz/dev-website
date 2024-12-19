@@ -2,12 +2,11 @@ import gmailLogo from "/src/assets/icons/gmail.svg";
 import githubLogo from "/src/assets/icons/github.svg";
 import linkedinLogo from "/src/assets/icons/linkedin.svg";
 import devPhoto from "/src/assets/images/dev_head.jpg";
+import pdfResume from "/src/assets/Devon Arganaraz Resume.pdf";
 
-const DownloadButton = () => {
-  const pdfUrl = "/src/assets/Devon Arganaraz Resume.pdf";
-
+const DownloadButton = ({ file }: { file: string | undefined }) => {
   return (
-    <a href={pdfUrl} download="Devon Arganaraz Resume.pdf">
+    <a href={file} download="Devon Arganaraz Resume.pdf">
       <button>Download CV</button>
     </a>
   );
@@ -49,7 +48,7 @@ function About() {
           </p>
 
           <br />
-          <DownloadButton />
+          <DownloadButton file={pdfResume} />
           <br />
 
           <ActionButton
