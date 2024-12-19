@@ -1,10 +1,10 @@
 import BinaryBackground from "../components/BinaryBackground";
 import ScrollDownButton from "../components/ScrollButton";
 
-function Header() {
+function Hero() {
   return (
     <>
-      <div className="binary-background-container">
+      <div className="binary-background-container" id="hero">
         <BinaryBackground />
         <div className="header-content">
           <h1>
@@ -21,4 +21,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Hero;

@@ -68,7 +68,7 @@
   object-fit: cover; /* Use cover to fill the circle */
 }
 
-/* Responsive adjustments (optional) */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .about-row {
     flex-direction: column; /* Stack vertically on smaller screens */
@@ -76,12 +76,22 @@
   }
 
   .text-left {
-    width: 90%;
+    width: 100%;
     margin: 10px 0;
   }
   .image-right {
     width: 50%;
     margin: 10px 0;
+  }
+  .header-content {
+    margin-top: 5em;
+    margin-bottom: 3em;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+  h5 {
+    font-size: 1.5em;
   }
 }
 

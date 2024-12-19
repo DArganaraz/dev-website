@@ -72,7 +72,7 @@ const BinaryBackground: React.FC = () => {
       <div key={rowIndex} className="binary-row">
         {binaryString.map((bit, bitIndex) => {
           const charX = bitIndex * charWidthRef.current;
-          const charY = rowIndex * 16;
+          const charY = rowIndex * 20; // adjusted for alignment
           const distance = calculateDistance(
             charX + charWidthRef.current / 2,
             charY + 8,
