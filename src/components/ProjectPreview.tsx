@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Project.css";
 import Logo, { LogoProps } from "./Logo";
 
@@ -7,6 +7,8 @@ interface ProjectPreviewProps {
   description: string;
   imageUrl: string;
   icons: LogoProps[];
+  isExpanded: boolean;
+  onClick: () => void;
 }
 
 const ProjectPreview: React.FC<ProjectPreviewProps> = ({
@@ -14,42 +16,32 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   description,
   imageUrl,
   icons,
+  isExpanded,
+  onClick,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const handleImageClick = () => {
-    setIsExpanded(!isExpanded);
-  };
-
   return (
-    <>
-      <div className={`project-preview ${isExpanded ? "expanded" : ""}`}>
-        <div className="image-container">
-          <img src={imageUrl} alt={title} onClick={handleImageClick} />
-          {isExpanded && (
-            <button className="close-button" onClick={handleImageClick}>
-              x
-            </button>
-          )}
-        </div>
+    <div
+      className={`project-preview ${isExpanded ? "expanded" : ""}`}
+      onClick={isExpanded ? () => null : onClick}
+    >
+      <div className="image-container">
+        <img src={imageUrl} alt={title} />
+      </div>
+      {isExpanded && (
         <div className="text-container">
           <h2>{title}</h2>
           <p>{description}</p>
-          {icons.length > 0 && (
-            <div className="icon-row">
-              {icons.map((logo) => (
-                <Logo key={logo.alt} {...logo} />
-              ))}
-            </div>
-          )}
+          <div className="icon-row">
+            {icons.map((logo) => (
+              <Logo key={logo.alt} {...logo} />
+            ))}
+          </div>
+          <button className="close-button" onClick={onClick}>
+            X
+          </button>
         </div>
-      </div>
-      <div>
-        <br />
-        <br />
-        <br />
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 

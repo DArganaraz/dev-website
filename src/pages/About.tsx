@@ -30,8 +30,8 @@ function About() {
           <p>
             I'm a Melbourne-based developer with a knack for turning complex
             ideas into efficient code. I have experience across a diverse range
-            of telecom projects, enabling me to break down challenges and
-            provide innovative solutions.
+            of telecom projects at Ericsson, enabling me to break down
+            challenges and provide innovative solutions.
           </p>
           <p>
             I've honed my skills across a wide range of programming languages -
