@@ -39,6 +39,7 @@ function About() {
             popular frameworks. My experience and education equips me to learn
             quickly and deliver outstanding results, no matter the project.
           </p>
+          <br />
           <p>
             <b>
               I'm currently open to full-time working opportunities as well as
@@ -47,8 +48,8 @@ function About() {
             </b>
           </p>
 
-          <br />
           <DownloadButton file={pdfResume} />
+          <br />
           <br />
 
           <ActionButton
