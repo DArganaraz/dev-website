@@ -86,9 +86,35 @@ function Projects() {
 
   const handleProjectClick = (title: string) => {
     setExpandedProject(title === expandedProject ? null : title);
+
+    const projSection = document.getElementById("projects");
+    if (projSection) {
+      projSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
-  const sortedProjects = [...projectData]; // Create a copy to avoid mutating original data
+  const handleNextProject = () => {
+    if (expandedProject) {
+      const currentIndex = projectData.findIndex(
+        (p) => p.title === expandedProject,
+      );
+      const nextIndex = (currentIndex + 1) % projectData.length;
+      setExpandedProject(projectData[nextIndex].title);
+    }
+  };
+
+  const handlePrevProject = () => {
+    if (expandedProject) {
+      const currentIndex = projectData.findIndex(
+        (p) => p.title === expandedProject,
+      );
+      const prevIndex =
+        (currentIndex - 1 + projectData.length) % projectData.length;
+      setExpandedProject(projectData[prevIndex].title);
+    }
+  };
+
+  const sortedProjects = [...projectData];
   if (expandedProject) {
     const expandedIndex = sortedProjects.findIndex(
       (p) => p.title === expandedProject,
@@ -102,9 +128,9 @@ function Projects() {
   return (
     <>
       <div id="projects">
-        <h1>
+        <h3>
           <span>&lt;</span>Projects<span>&gt;</span>
-        </h1>
+        </h3>
         <div className="project-grid">
           {sortedProjects.map((project) => (
             <ProjectPreview
@@ -112,6 +138,8 @@ function Projects() {
               {...project}
               isExpanded={project.title === expandedProject}
               onClick={() => handleProjectClick(project.title)}
+              onNext={handleNextProject}
+              onPrev={handlePrevProject}
             />
           ))}
         </div>
