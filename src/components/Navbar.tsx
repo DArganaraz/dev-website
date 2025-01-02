@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Navbar.css";
+import "./Navbar.scss";
 
 interface NavItem {
   label: string;
