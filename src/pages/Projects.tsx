@@ -10,6 +10,7 @@ import djLogo from "/src/assets/icons/django.svg";
 import ampLogo from "/src/assets/icons/Amplify.svg";
 import dotnetLogo from "/src/assets/icons/dot-net-core.svg";
 import csharpLogo from "/src/assets/icons/csh.svg";
+import sassLogo from "/src/assets/icons/sass.svg";
 
 import todoImage from "/src/assets/images/todo-list.png";
 import dashImage from "/src/assets/images/JS_dashboard.png";
@@ -76,6 +77,7 @@ const projectData = [
       { src: tsLogo, alt: "Typescript", className: "logo" },
       { src: reactLogo, alt: "React", className: "logo react" },
       { src: viteLogo, alt: "Vite", className: "logo vite" },
+      { src: sassLogo, alt: "Sass", className: "logo" },
       { src: ampLogo, alt: "AWS Amplify Gen 2", className: "logo" },
     ],
   },
