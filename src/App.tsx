@@ -9,11 +9,8 @@ function App() {
     <>
       <Navbar />
       <Hero />
-
       <About />
-
       <Projects />
-
       <p>&copy; Devon Arganaraz 2024</p>
     </>
   );
