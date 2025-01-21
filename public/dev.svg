@@ -1,6 +1,6 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" fill="#031720"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="monospace" font-size="21" fill="white">
-    <tspan fill="#87CEEB">&lt;</tspan>D<tspan fill="#87CEEB">&gt;</tspan>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" fill="#031720"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="24" fill="white">
+    <tspan fill="#87CEEB">&lt;</tspan><tspan fill="#fffff">D</tspan><tspan fill="#87CEEB">&gt;</tspan>
   </text>
 </svg>
